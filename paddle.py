@@ -1,25 +1,29 @@
 from turtle import Turtle
 
-INITIAL_POSITION1 = [(300, -40), (300, -20), (300, 0), (300, 20), (300, 40)]
-INITIAL_POSITION2 = [(-300, -40), (-300, -20), (-300, 0), (-300, 20), (-300, 40)]
-
 
 class Paddle:
-	def __init__(self,):
-		self.width = 1
-		self.height = 1
+	def __init__(self, x):
+		self.paddle_component = None
+		self.width = 10
+		self.height = 2
+		self.x = x
+		self.y = 0
+		self.step = 40
 
+	def create_paddle(self):
+		self.paddle_component = Turtle("square")
+		self.paddle_component.speed(0)
+		self.paddle_component.color("white")
+		self.paddle_component.shapesize(self.width, self.height)
+		self.paddle_component.penup()
+		self.paddle_component.goto(self.x, 0)
 
-	def create_Player1_Paddle(self):
-		self.create_paddle(INITIAL_POSITION1)
+	def move_up(self):
+		if self.y < 200:
+			self.y += self.step
+			self.paddle_component.goto(self.x, self.y)
 
-	def create_Player2_Paddle(self):
-		self.create_paddle(INITIAL_POSITION2)
-
-	def create_paddle(self,  initial_position):
-		for position in initial_position:
-			paddle_component = Turtle("square")
-			paddle_component.color("white")
-			paddle_component.shapesize(self.width, self.height)
-			paddle_component.penup()
-			paddle_component.goto(position)
+	def move_down(self):
+		if self.y > -200:
+			self.y -= self.step
+			self.paddle_component.goto(self.x, self.y)
