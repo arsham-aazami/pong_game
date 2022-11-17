@@ -10,6 +10,8 @@ class Ball:
         self.width = 1
         self.width = 1
         self.ball = Turtle("circle")
+        self.x_move = 10
+        self.y_move = 1
         self.create()
 
     def create(self):
@@ -17,11 +19,13 @@ class Ball:
         self.ball.penup()
         self.ball.color("green")
 
-    def random_move(self):
-        random_x = random.choice([-400, 400])
-        random_y = random.randint(-300, 300)
-        self.ball.goto(random_x, random_y)
+    def move(self):
+        self.x += self.x_move
+        self.y += self.y_move
+        self.ball.goto(self.x, self.y)
 
+    def bounce_to_bottom(self):
+        self.y_move *= -1
 
-
-
+    def bounce_to_left(self):
+        self.x_move *= -1
