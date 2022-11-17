@@ -1,0 +1,53 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from turtle import Turtle, Screen\r\nfrom paddle import Paddle\r\n\r\nscreen = Screen()\r\nscreen.setup(800, 600)\r\nscreen.bgcolor(\"#000000\")\r\nscreen.tracer(1)\r\nscreen.title(\"Pong\")\r\n\r\n# Implementing paddles\r\nplayer1_paddle = Paddle(350)\r\nplayer1_paddle.create_paddle()\r\n\r\nplayer2_paddle = Paddle(-350)\r\nplayer2_paddle.create_paddle()\r\n\r\n# Adding event listeners\r\nscreen.listen()\r\nscreen.onkey(fun=player1_paddle.move_up, key=\"Up\")\r\nscreen.onkey(fun=player1_paddle.move_down, key=\"Down\")\r\n\r\n# Implementing the middle line\r\nfor y_position in range(-300, 300, 20):\r\n\tsquare = Turtle(\"square\")\r\n\tsquare.shapesize(0.4, 0.4)\r\n\tsquare.speed(0)\r\n\tsquare.color(\"white\")\r\n\tsquare.penup()\r\n\tsquare.goto(0, y_position)\r\n\r\nscreen.mainloop()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,5 +1,6 @@
+ from turtle import Turtle, Screen
+ from paddle import Paddle
++from ball import Ball
+ 
+ screen = Screen()
+ screen.setup(800, 600)
+@@ -19,6 +20,7 @@
+ screen.onkey(fun=player1_paddle.move_up, key="Up")
+ screen.onkey(fun=player1_paddle.move_down, key="Down")
+ 
++
+ # Implementing the middle line
+ for y_position in range(-300, 300, 20):
+ 	square = Turtle("square")
+@@ -28,4 +30,5 @@
+ 	square.penup()
+ 	square.goto(0, y_position)
+ 
++
+ screen.mainloop()
+Index: ball.py
+===================================================================
+diff --git a/ball.py b/ball.py
+new file mode 100644
+--- /dev/null	
++++ b/ball.py	
+@@ -0,0 +1,15 @@
++from turtle import Turtle
++
++class Ball:
++	def __init__(self, x, y):
++		self.x = x
++		self.y = y
++		self.width = 1
++		self.height = 1
++
++	def move(self):
++		for
++
++
++
++

@@ -1,0 +1,19 @@
+Index: paddle.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from turtle import Turtle\r\n\r\n\r\nclass Paddle:\r\n\tdef __init__(self, x):\r\n\t\tself.paddle_component = None\r\n\t\tself.width = 10\r\n\t\tself.height = 2\r\n\t\tself.x = x\r\n\t\tself.y = 0\r\n\t\tself.step = 40\r\n\r\n\tdef create_paddle(self):\r\n\t\tself.paddle_component = Turtle(\"square\")\r\n\t\tself.paddle_component.speed(0)\r\n\t\tself.paddle_component.color(\"white\")\r\n\t\tself.paddle_component.shapesize(self.width, self.height)\r\n\t\tself.paddle_component.penup()\r\n\t\tself.paddle_component.goto(self.x, 0)\r\n\r\n\tdef move_up(self):\r\n\t\tif self.y < 200:\r\n\t\t\tself.y += self.step\r\n\t\t\tself.paddle_component.goto(self.x, self.y)\r\n\r\n\tdef move_down(self):\r\n\t\tif self.y > -200:\r\n\t\t\tself.y -= self.step\r\n\t\t\tself.paddle_component.goto(self.x, self.y)\r\n
+===================================================================
+diff --git a/paddle.py b/paddle.py
+--- a/paddle.py	
++++ b/paddle.py	
+@@ -4,8 +4,8 @@
+ class Paddle:
+ 	def __init__(self, x):
+ 		self.paddle_component = None
+-		self.width = 10
+-		self.height = 2
++		self.width = 8
++		self.height = 1
+ 		self.x = x
+ 		self.y = 0
+ 		self.step = 40
