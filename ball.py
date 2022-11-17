@@ -18,9 +18,9 @@ class Ball:
         self.ball.color("green")
 
     def random_move(self):
-        # random_x = random.randint(-400, 400)
+        random_x = random.choice([-400, 400])
         random_y = random.randint(-300, 300)
-        self.ball.goto(320, random_y)
+        self.ball.goto(random_x, random_y)
 
 
 
