@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
+from ball import Ball
 
 screen = Screen()
 screen.setup(800, 600)
@@ -19,6 +20,11 @@ screen.listen()
 screen.onkey(fun=player1_paddle.move_up, key="Up")
 screen.onkey(fun=player1_paddle.move_down, key="Down")
 
+# Implementing ball physics
+pong_ball = Ball()
+pong_ball.random_move()
+if pong_ball.ball.distance(player1_paddle) < 10:
+	print("1")
 # Implementing the middle line
 for y_position in range(-300, 300, 20):
 	square = Turtle("square")
