@@ -11,7 +11,7 @@ class Ball:
         self.width = 1
         self.ball = Turtle("circle")
         self.x_move = 10
-        self.y_move = 1
+        self.y_move = 10
         self.create()
 
     def create(self):
@@ -29,3 +29,6 @@ class Ball:
 
     def bounce_to_left(self):
         self.x_move *= -1
+
+    def bounce(self, component):
+        component *= -1

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edd6b5c-883b-4190-a5a0-841e74f3c214" name="Changes" comment="adding game over text">
+    <list default="true" id="8edd6b5c-883b-4190-a5a0-841e74f3c214" name="Changes" comment="bouncing the ball">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ball.py" beforeDir="false" afterPath="$PROJECT_DIR$/ball.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paddle.py" beforeDir="false" afterPath="$PROJECT_DIR$/paddle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668694620536</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bouncing the ball">
+      <created>1668698692475</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668698692475</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +154,7 @@
     <MESSAGE value="added" />
     <MESSAGE value="ball class done" />
     <MESSAGE value="adding game over text" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding game over text" />
+    <MESSAGE value="bouncing the ball" />
+    <option name="LAST_COMMIT_MESSAGE" value="bouncing the ball" />
   </component>
 </project>
